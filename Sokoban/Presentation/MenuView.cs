@@ -31,10 +31,15 @@ namespace Sokoban.Presentation
             Console.WriteLine("x : bestemming         |                      |");
             Console.Write("|      ");
             Console.WriteLine("@ : truck              |                      |");
+            Console.Write("|      ");
+            Console.WriteLine("~ : valkuil            |                      |");
+            Console.Write("|      ");
+            Console.WriteLine("$ : collega            |                      |");
             Console.WriteLine("|----------------------------------------------------|");
             Console.WriteLine();
             
             Console.Write("> Kies een doolhof (1 - 6), s = stop");    //InputView?
+            Console.ReadLine();
             
         }
     }

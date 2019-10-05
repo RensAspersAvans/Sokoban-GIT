@@ -7,7 +7,7 @@ namespace Sokoban
 {
     public class MazeCollector
     {
-        public Maze_Model Maze_Model
+        public Maze Maze_Model
         {
             get => default;
             set
