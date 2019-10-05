@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sokoban.Model.MazeTypes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,7 +30,7 @@ namespace Sokoban
 
         public void buildEmptyMaze(int lenght, int width)
         {
-            _origin = new MazeField();
+            _origin = new Field_Empty();
 
 
 
@@ -39,7 +40,7 @@ namespace Sokoban
                 {
                     if (!(x == 0 && y == 0))
                     {
-                        MazeField newField = new MazeField();
+                        MazeField newField = new Field_Empty();
                         MazeField west = null;
                         MazeField north = null;
                         if (x != 0)
