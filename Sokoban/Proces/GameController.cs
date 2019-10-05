@@ -18,6 +18,7 @@ namespace Sokoban
         {
             this._mv = new MenuView();
             this._gv = new GameView();
+            this._iv = new InputView();
         }
 
         public void run()

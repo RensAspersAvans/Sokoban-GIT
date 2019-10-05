@@ -9,11 +9,17 @@ namespace Sokoban.Presentation
     public class InputView
     {
 
-
+        public void MenuChoiche()
+        {
+            
+        }
         public void setMove()
         {
             ConsoleKey keyPressed;
+            
         }
+
+        
 
     }
 }
