@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sokoban
 {
-    public class MazeField
+    public abstract class MazeField
     {
 
         public MazeField _north { get; set; }
