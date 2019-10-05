@@ -23,7 +23,7 @@ namespace Sokoban
             _mv.show();
         }
 
-        public Maze_Model _maze_Model
+        public Maze _maze_Model
         {
             get => default;
             set
@@ -36,7 +36,7 @@ namespace Sokoban
         {
             int choice;
             Int32.TryParse(input, out choice);
-            _maze_Model = new Maze_Model(choice);
+            _maze_Model = new Maze(choice);
         }
 
 
