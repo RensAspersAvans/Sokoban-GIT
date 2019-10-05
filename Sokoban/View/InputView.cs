@@ -8,5 +8,11 @@ namespace Sokoban.View
 {
     class InputView
     {
+
+        public void setMove()
+        {
+            ConsoleKey keyPressed
+        }
+
     }
 }
