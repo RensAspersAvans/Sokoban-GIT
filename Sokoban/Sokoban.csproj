@@ -56,6 +56,8 @@
     <Compile Include="View\GameView.cs" />
     <Compile Include="Controller\MazeCollector.cs" />
     <Compile Include="Model\Maze_Model.cs" />
+    <Compile Include="View\InputResponseView.cs" />
+    <Compile Include="View\InputView.cs" />
     <Compile Include="View\MenuView.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
