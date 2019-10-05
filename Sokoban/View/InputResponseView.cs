@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Sokoban.View
 {
-    public class InputView
+    public class InputResponseView
     {
 
-       
-       
     }
 }

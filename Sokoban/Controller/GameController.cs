@@ -10,7 +10,6 @@ namespace Sokoban
 
         private MenuView _mv;
         private GameView _gv;
-        
 
         public GameController()
         {
