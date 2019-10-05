@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sokoban.Proces
+namespace Sokoban.Model.GameItems
 {
-    class Parser
+    class Player : Item
     {
     }
 }

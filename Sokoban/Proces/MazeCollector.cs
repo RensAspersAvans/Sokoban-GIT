@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sokoban
 {
-    public class MazeCollector
+    public class MazeCollector //Uitlezen doolhofbestand (uit Sokoban.MazeFiles) + Maze aanmaken (Heet Parser in Slides)
     {
         public Maze Maze_Model
         {
