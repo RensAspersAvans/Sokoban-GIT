@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Sokoban.Presentation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+
 
 namespace Sokoban
 {
@@ -10,6 +12,7 @@ namespace Sokoban
 
         private MenuView _mv;
         private GameView _gv;
+        private InputView _iv;
 
         public GameController()
         {
