@@ -8,5 +8,8 @@ namespace Sokoban.View
 {
     public class InputView
     {
+
+       
+       
     }
 }
