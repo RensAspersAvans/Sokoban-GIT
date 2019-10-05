@@ -7,5 +7,10 @@ namespace Sokoban
 {
     public class MenuView
     {
+        public void show()
+        {
+            Console.WriteLine("hoi");
+            Console.ReadLine();
+        }
     }
 }
