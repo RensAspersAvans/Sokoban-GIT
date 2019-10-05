@@ -6,13 +6,27 @@ using System.Threading.Tasks;
 
 namespace Sokoban.View
 {
-    class InputView
+    public class InputView
     {
+<<<<<<< HEAD
 
         public void setMove()
         {
-            ConsoleKey keyPressed
+            ConsoleKey keyPressed;
+            while(true)
+            {
+                switch(keyPressed)
+                {
+                    
+                }
+            }
         }
 
+=======
+        public InputView()
+        {
+            Console.WriteLine("f");
+        }
+>>>>>>> 378fc358becee838a4e5e8135b77b118d8973434
     }
 }
