@@ -11,6 +11,9 @@ namespace Sokoban
         public Maze_Model(int number)
         {
             _number = number;
+
+
+
             if (number == 99)
             {
                 testMaze();
@@ -27,7 +30,7 @@ namespace Sokoban
         private int _number { get; set; }
         private MazeField _origin { get; set; }
 
-        public void buildEmptyMaze(int lenght, int width)
+        public void buildEmptyMaze(int lenght, int width) //Parser moet maze aanmaken volgens presentatie
         {
             _origin = new MazeField();
 

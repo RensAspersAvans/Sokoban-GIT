@@ -7,12 +7,15 @@ namespace Sokoban
 {
     public class MazeCollector
     {
-        public Maze_Model Maze_Model
+        private Maze_Model _mazeModel 
         {
             get => default;
             set
             {
+                //string[] lines = System.IO.File.ReadAllLines(@"MAZEFOLDER" + 1 + ".txt");
             }
         }
+
+        
     }
 }

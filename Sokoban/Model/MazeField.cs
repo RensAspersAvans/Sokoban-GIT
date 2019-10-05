@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Sokoban
+﻿namespace Sokoban
 {
-    public class MazeField
+    public abstract class MazeField //Abstract omdat deze niet geïnstantieerd hoort te worden
     {
 
         public MazeField _north { get; set; }
