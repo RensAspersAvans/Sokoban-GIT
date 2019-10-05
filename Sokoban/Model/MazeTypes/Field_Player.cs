@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sokoban
 {
-    public class Maze_Crate : MazeField
+    public class Field_Player : MazeField
     {
     }
 }

@@ -5,10 +5,10 @@ using System.Text;
 
 namespace Sokoban
 {
-    public class Maze_Model
+    public class Maze
     {
 
-        public Maze_Model(int number)
+        public Maze(int number)
         {
             _number = number;
             if (number == 99)

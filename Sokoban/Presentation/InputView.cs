@@ -13,13 +13,6 @@ namespace Sokoban.View
         public void setMove()
         {
             ConsoleKey keyPressed;
-            while(true)
-            {
-                switch(keyPressed)
-                {
-                    
-                }
-            }
         }
 
 =======

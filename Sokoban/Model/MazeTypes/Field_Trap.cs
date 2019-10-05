@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Sokoban
+namespace Sokoban.Model.MazeTypes
 {
-    public class Maze_Wall : MazeField
+    class Field_Trap
     {
     }
 }
