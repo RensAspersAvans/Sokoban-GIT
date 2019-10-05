@@ -35,7 +35,7 @@ namespace Sokoban
             Console.WriteLine();
             
             Console.Write("> Kies een doolhof (1 - 6), s = stop");    //InputView?
-            Console.ReadLine();
+            
         }
     }
 }
