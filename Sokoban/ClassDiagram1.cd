@@ -87,5 +87,12 @@
       <FileName>Model\MazeTypes\Maze_Correct_Crate.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Enum Name="Sokoban.Directions">
+    <Position X="12.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAAQ=</HashCode>
+      <FileName>Model\Directions.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
