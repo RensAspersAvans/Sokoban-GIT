@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sokoban.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace Sokoban
         public MazeField _east { get; set; }
         public MazeField _south { get; set; }
         public MazeField _west { get; set; }
+
 
         public bool hasSouth()
         {
@@ -31,6 +33,31 @@ namespace Sokoban
             }
             return false;
         }
+
+        public Item content { get; set; }
+
+        public Char symbol
+        {
+            get {
+                if (content == null)
+                {
+                    return symbol;
+                }
+                else
+                {
+                    return content.symbol;
+                }
+
+            }
+
+            set
+            {
+                symbol = value;
+            }
+
+        }
+
+
         public MazeField findNextField(Directions d)
         {
             if (d == Directions.North)

@@ -13,6 +13,7 @@ namespace Sokoban
         private MenuView _mv;
         private GameView _gv;
         private InputView _iv;
+        public bool running { get; set; }
 
         public GameController()
         {
@@ -37,14 +38,8 @@ namespace Sokoban
             }
         }
 
-        public Maze _maze_Model
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
+        public Maze _maze_Model {get; set; }
+       
 
         public void getMaze(String input)
         {
@@ -76,6 +71,28 @@ namespace Sokoban
         {
             MazeField origin = level.getMazeFields()[0];
             _gv.drawMaze(origin);           
+        }
+
+        public void runGame()
+        {
+            //aanmaken objecten
+            this.running = true;
+
+            while (running)//endgame nog inbouwen
+            {
+                Console.WriteLine("Press one of the arrow keys to move, or R to reset or S to stop the game.");
+                Command c = _iv.setMove();
+                if (c == Command.escape || c == Command.restart)
+                {
+                    //restart of escape
+                }
+                else
+                {
+                    //playerobject.move(c)
+                    //if er een medewerker is, update die
+                }
+                
+            }
         }
 
 
