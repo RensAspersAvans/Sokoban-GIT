@@ -21,5 +21,58 @@ namespace Sokoban.Model.GameItems
         {
             this.awake = true;
         }
+
+        public override bool move(Directions d)
+        {
+            if (this.cur_spot.findNextField(d).content != null)
+            {
+                if (this.cur_spot.findNextField(d).content.move(d))
+                {
+                    base.move(d);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public void update()
+        {
+            if (awake)
+            {
+                Random rnd = new Random();
+                int i = rnd.Next(1, 4);
+
+                switch (i)
+                {
+                    case 1:
+                    
+                        this.move(Directions.North);
+                        break;
+                    
+                    case 2:
+                    
+                        this.move(Directions.East);
+                        break;
+                    
+                    case 3:
+                    
+                        this.move(Directions.South);
+                       break;
+                    
+                    case 4:
+
+                        this.move(Directions.West);
+                        break;
+                    
+
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+
+            }
+        }
     }
 }

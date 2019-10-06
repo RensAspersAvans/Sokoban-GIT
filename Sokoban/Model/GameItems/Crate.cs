@@ -20,7 +20,7 @@ namespace Sokoban.Model.GameItems
             {
                 if (this.cur_spot is Field_Target)
                 {
-                    return 'x';
+                    return 'X';
                 }
                 else
                 {
