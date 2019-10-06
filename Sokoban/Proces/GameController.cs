@@ -148,5 +148,45 @@ namespace Sokoban
             createMaze(levelNumber);
             runGame();
         }
+
+        public GameView GameView
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public MenuView MenuView
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        internal Employee Employee
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Maze Maze
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public InputView InputView
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

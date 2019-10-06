@@ -69,5 +69,12 @@ namespace Sokoban
             }
         }
 
+        public MazeCollector MazeCollector
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 }

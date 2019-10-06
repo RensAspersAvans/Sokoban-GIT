@@ -8,6 +8,14 @@ namespace Sokoban
 {
     class Program
     {
+        public GameController GameController
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         static void Main(string[] args)
         {
             new GameController().run();

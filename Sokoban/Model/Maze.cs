@@ -25,6 +25,14 @@ namespace Sokoban
         private int _number { get; set; }
         public MazeField _origin { get; set; }
 
+        public MazeField MazeField
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public bool checkFinished()
         {
             int amountOfCrates = 0;
