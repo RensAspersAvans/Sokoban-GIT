@@ -17,7 +17,7 @@ namespace Sokoban.Model.MazeTypes
 
         public override char getCharValue()
         {
-            return ' ';
+            return '~';
         }
     }
 }
