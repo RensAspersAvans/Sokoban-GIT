@@ -11,11 +11,27 @@ namespace Sokoban.Model.GameItems
         public Employee(MazeField start)
         {
             this.cur_spot = start;
-            this.symbol = '~';
+            this.symbol = '$';
             this.awake = true;
         }
 
         public bool awake { get; set;  }
+
+        public override char symbol
+        {
+            get
+            {
+                if (awake)
+                {
+                    return '$';
+                }
+                else
+                {
+                    return 'Z';
+                }
+            }
+            set => base.symbol = value;
+        }
 
         public override void wake()
         {
