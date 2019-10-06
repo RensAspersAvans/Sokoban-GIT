@@ -17,7 +17,7 @@ namespace Sokoban.Presentation
                 {
                     try
                     {
-                        Console.Write(field.getCharValue());
+                        Console.Write(field.symbol);
                         field = field._east;
                     }
                     catch
