@@ -8,11 +8,14 @@ namespace Sokoban
 {
     public class Maze
     {
-
-        public Maze(int number)
+        private int _size; //hoeveelheid regels, mag ook y zijn
+        private List<MazeField> _fullMaze; //alle MazeFields
+        public Maze()
         {
-            _number = number;
-            if (number == 99)
+            _fullMaze = new List<MazeField>();
+            _size = 0;
+            _number = 99;
+            if (_number == 99)
             {
                 testMaze();
             }
@@ -26,65 +29,31 @@ namespace Sokoban
         }
 
         private int _number { get; set; }
-        private MazeField _origin { get; set; }
+        private MazeField _origin { get; set; } 
 
-        public void buildEmptyMaze(int lenght, int width)
+       
+
+        public void addLine(List<MazeField> mazeFieldLine)
         {
-            _origin = new Field_Empty();
-
-
-
-            for (int y = 0; y < lenght; y++)
+            if(_size == 0)
             {
-                for (int x = 0; x < width; x++)
-                {
-                    if (!(x == 0 && y == 0))
-                    {
-                        MazeField newField = new Field_Empty();
-                        MazeField west = null;
-                        MazeField north = null;
-                        if (x != 0)
-                        {
-                            west = _origin;
-                            if (y != 0 || x > 1)
-                            {
-                                for (int i = 0; i < x - 1; i++)
-                                {
-                                    west = west._east;
-                                }
-                                for (int k = 0; k < y; k++)
-                                {
-                                    west = west._south;
-                                }
-                            }
-
-                            newField._west = west;
-                            west._east = newField;
-                        }
-                        if (y != 0)
-                        {
-                            if (x == 0)
-                            {
-                                north = _origin;
-                                for (int j = 0; j < y - 1; j++)
-                                {
-                                    north = north._south;
-                                }
-                            }
-                            else
-                            {
-                                north = newField._west._north._east;
-
-
-                            }
-                            newField._north = north;
-                            north._south = newField;
-
-                        }
-                    }
-                }
+                _origin = mazeFieldLine[0];
             }
+
+            foreach(MazeField field in mazeFieldLine)
+            {
+                _fullMaze.Add(field);
+            }
+
+
+            _size++;
         }
+
+        public List<MazeField> getMazeFields()
+        {
+            return _fullMaze;
+        }
+
 
         public void fillMaze()
         {
@@ -93,7 +62,7 @@ namespace Sokoban
 
         public void testMaze()
         {
-            buildEmptyMaze(6, 8);
+            //buildEmptyMaze(6, 8);
         }
     }
 }

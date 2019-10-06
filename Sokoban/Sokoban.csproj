@@ -51,7 +51,6 @@
     <Compile Include="Model\MazeTypes\Field_Trap.cs" />
     <Compile Include="Proces\GameController.cs" />
     <Compile Include="Model\Directions.cs" />
-    <Compile Include="Model\MazeTypes\Field_Correct_Crate.cs" />
     <Compile Include="Model\MazeTypes\Field_Target.cs" />
     <Compile Include="Model\MazeTypes\Field_Floor.cs" />
     <Compile Include="Model\MazeTypes\Field_Wall.cs" />

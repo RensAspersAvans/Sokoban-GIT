@@ -7,5 +7,11 @@ namespace Sokoban
 {
     public class Field_Wall : MazeField
     {
+
+
+        public override char getCharValue()
+        {
+            return '█';
+        }
     }
 }

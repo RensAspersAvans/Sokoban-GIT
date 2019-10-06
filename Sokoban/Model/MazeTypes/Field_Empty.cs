@@ -8,5 +8,12 @@ namespace Sokoban.Model.MazeTypes
 {
     class Field_Empty : MazeField
     {
+
+        
+
+        public override char getCharValue()
+        {
+            return ' ';
+        }
     }
 }

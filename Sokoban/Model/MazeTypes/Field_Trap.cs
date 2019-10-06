@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Sokoban.Model.MazeTypes
 {
-    class Field_Trap
+    class Field_Trap : MazeField
     {
+
+
+        public override char getCharValue()
+        {
+            return ' ';
+        }
     }
 }
