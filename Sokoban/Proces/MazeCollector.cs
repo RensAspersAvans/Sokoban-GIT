@@ -36,7 +36,7 @@ namespace Sokoban
             level = new Maze();
 
             
-            for(int index = 0; index < mazeFile.Length - 1; index++)
+            for(int index = 0; index < mazeFile.Length; index++)
             {
                 if (level.emptyLevel())
                 {
@@ -53,10 +53,7 @@ namespace Sokoban
                                
                               
             }
-            
-            
-                  
-                       
+                      
             return level;            
         }
 
