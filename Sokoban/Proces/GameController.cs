@@ -73,7 +73,7 @@ namespace Sokoban
 
         public void showMaze(Maze level)
         {
-            MazeField origin = level._origin._south._south;
+            MazeField origin = level._origin;
             int mazeHeight = level.getHeigth();
             int mazeWidth = level.getWidth();
             Console.Clear();
@@ -87,7 +87,7 @@ namespace Sokoban
 
             while (running)//endgame nog inbouwen
             {
-                Console.WriteLine("Press one of the arrow keys to move, or R to reset or S to stop the game.");
+                Console.WriteLine("Press one of the arrow keys to move, R to reset or S to stop the game.");
                 Command c = _iv.setMove();
                 if (c == Command.escape || c == Command.restart)
                 {

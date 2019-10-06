@@ -35,35 +35,16 @@ namespace Sokoban
         {
             level = new Maze();
 
-            int height = 0;
-            foreach(string line in mazeFile)
-            {
-                if(height % 2 == 0)
-                {
-                    mazeLineTop = createLine(line);
-                }
-                else
-                {
-                    mazeLineBottom = createLine(line);
-                    linkVertical();
-                    level.addLine(mazeLineTop);
-                    level.addLine(mazeLineBottom);
-                    mazeLineBottom.Clear();
-                    mazeLineTop.Clear();
-                }
-                height++;
-            }
-
-            if(height%2==1) //oneven aantal regels
-            {
-                List<MazeField> tempList = new List<MazeField>();
-                tempList = mazeLineBottom;
-                mazeLineBottom = mazeLineTop;
-                mazeLineTop = tempList;
-                linkVertical();
-                level.addLine(mazeLineBottom);
-            }
             
+            for(int index = 0; index < mazeFile.Length - 1; index++)
+            {
+                mazeLineTop = createLine(mazeFile[index]);
+                mazeLineBottom = createLine(mazeFile[index + 1]);
+                linkVertical();                
+                level.addLine(mazeLineTop);
+                index++;
+            }
+                  
                        
             return level;            
         }
@@ -86,7 +67,7 @@ namespace Sokoban
             {
                 mazeLineBottom[index]._north = mazeLineTop[index];
                 mazeLineTop[index]._south = mazeLineBottom[index];
-            }
+            }   
             
         }
 
