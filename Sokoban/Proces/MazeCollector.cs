@@ -41,8 +41,7 @@ namespace Sokoban
                 mazeLineTop = createLine(mazeFile[index]);
                 mazeLineBottom = createLine(mazeFile[index + 1]);
                 linkVertical();                
-                level.addLine(mazeLineTop);
-                index++;
+                level.addLine(mazeLineTop);                
             }
                   
                        
