@@ -27,14 +27,8 @@ namespace Sokoban
             _mv.show();
         }
 
-        public Maze _maze_Model
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
+        public Maze _maze_Model {get; set; }
+       
 
         public void getMaze(String input)
         {
