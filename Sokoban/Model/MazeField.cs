@@ -18,7 +18,7 @@ namespace Sokoban
         public bool hasSouth()
         {
             if(_south != null)
-            {
+            {               
                 return true;
             }
             return false;
@@ -29,6 +29,7 @@ namespace Sokoban
         {
             if (_east != null)
             {
+                
                 return true;
             }
             return false;
