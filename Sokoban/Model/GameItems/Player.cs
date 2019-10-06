@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Sokoban.Model.GameItems
 {
-    class Player : Item
+    public class Player : Item
     {
+        public Player(MazeField start)
+        {
+            this.cur_spot = start;
+            this.symbol = '@';
+        }
     }
 }

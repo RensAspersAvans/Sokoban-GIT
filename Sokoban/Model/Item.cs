@@ -9,15 +9,17 @@ namespace Sokoban.Model
 {
     public class Item //Zelfde idee als MazeField
     {
-        private Char symbol { get; set; }
-        private MazeField cur_spot { get; set; }
+        public Char symbol { get; set; }
+        public MazeField cur_spot { get; set; }
 
 
         public void move(Directions d)
         {
             if (checkMove(d))
             {
+                this.cur_spot.content = null;
                 this.cur_spot = cur_spot.findNextField(d);
+                this.cur_spot.content = this;
             }
         }
 

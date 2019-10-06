@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sokoban.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace Sokoban
         public MazeField _east { get; set; }
         public MazeField _south { get; set; }
         public MazeField _west { get; set; }
+
+        public Item content { get; set; }
 
         public MazeField findNextField(Directions d)
         {
