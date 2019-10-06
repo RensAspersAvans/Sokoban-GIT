@@ -105,7 +105,9 @@ namespace Sokoban
                         break;
                     case '@':                        
                         tempField = new Field_Floor();
-                        tempField.content = new Player(tempField);
+                        Player p = new Player(tempField);
+                        tempField.content = p;
+                        gc.player = p;
                         break;
                     case 'x':                        
                         tempField = new Field_Target();

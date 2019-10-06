@@ -14,8 +14,9 @@ namespace Sokoban
         private MenuView _mv;
         private GameView _gv;
         private InputView _iv;
-        private Player player;
+        public Player player { get; set; }
         private Employee emp;
+        private Maze level;
         public bool running { get; set; }
 
         public GameController()
@@ -37,7 +38,7 @@ namespace Sokoban
             else
             {
                 createMaze(levelNumber);
-                Thread.Sleep(20000);
+                runGame();
             }
         }
 
@@ -54,7 +55,7 @@ namespace Sokoban
 
         public Maze createMaze(int choice)
         {
-            Maze level;
+           
             MazeCollector parser = new MazeCollector();
             parser.gc = this;
             if(parser.loadFile(choice)) //als de file geladen kan worden
@@ -113,12 +114,12 @@ namespace Sokoban
                         default:
                             break;
                     }
-
+                        
                     if (emp != null)
                     {
                         emp.update();
                     }
-                    
+                    showMaze(level); 
                 }
                 
             }
