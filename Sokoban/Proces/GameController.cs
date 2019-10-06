@@ -18,7 +18,7 @@ namespace Sokoban
         private Employee emp;
         private Maze level;
         public bool running { get; set; }
-
+        public int levelNumber;
         public GameController()
         {
             this._mv = new MenuView();
@@ -28,7 +28,7 @@ namespace Sokoban
 
         public void run()
         {
-            int levelNumber;
+            
             _mv.show();
             levelNumber = _iv.MenuChoice();
             if(levelNumber == -1)
@@ -92,7 +92,18 @@ namespace Sokoban
                 Command c = _iv.setMove();
                 if (c == Command.escape || c == Command.restart)
                 {
-                    //restart of escape
+                    if (c == Command.escape)
+                    {
+                        Console.Clear();
+                        run();
+                        break;
+                    }
+                    else if(c == Command.restart)
+                    { 
+                        reloadMaze();
+                        break;
+                        
+                    }
                 }
                 else
                 {
@@ -125,6 +136,11 @@ namespace Sokoban
             }
         }
 
-
+        private void reloadMaze()
+        {
+            level = null;
+            createMaze(levelNumber);
+            runGame();
+        }
     }
 }
