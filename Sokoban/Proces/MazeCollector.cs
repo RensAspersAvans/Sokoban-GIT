@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Sokoban.Model.MazeTypes;
+using System.Threading;
 
 namespace Sokoban
 {
@@ -59,8 +60,7 @@ namespace Sokoban
             }
             
                        
-            return level;
-            //werkend
+            return level;            
         }
 
         
@@ -90,36 +90,38 @@ namespace Sokoban
         private List<MazeField> createLine(string line)
         {
             List<MazeField> mazeLine = new List<MazeField>();
-
+            int width = 0;
             foreach (char field in line)
             {
                 MazeField tempField;
                 switch(field)
                 {
-                    case '#':
+                    case '#':                        
                         tempField = new Field_Wall();
                         break;
-                    case 'o':
+                    case 'o':                        
                         tempField = new Field_Floor();
                         break;
-                    case '.':
+                    case '.':                        
                         tempField = new Field_Floor();
                         break;
-                    case '@':
+                    case '@':                        
                         tempField = new Field_Floor();
                         break;
-                    case 'x':
+                    case 'x':                        
                         tempField = new Field_Target();
                         break;
                     default:
-                        tempField = null;
+                        tempField = new Field_Empty();
                         break;
                 }
+                width++;
                 mazeLine.Add(tempField);
             }
+            level.setWidth(width);
             
             //Link Horizontal
-            for(int index  = 0; index < mazeLine.Count; index++)
+            for (int index  = 0; index < mazeLine.Count; index++)
             {
                 if(index != 0)
                 {
@@ -128,7 +130,7 @@ namespace Sokoban
                 if(index < mazeLine.Count - 1)
                 {
                     mazeLine[index]._east = mazeLine[index + 1];
-                }
+                }                
             }
 
             return mazeLine;

@@ -8,20 +8,30 @@ namespace Sokoban.Presentation
     public class GameView
     {
 
-        public void drawMaze(MazeField origin)
+        public void drawMaze(MazeField origin, int mazeHeight, int mazeWidth)
         {
             MazeField field = origin;
-            while(field.hasSouth())
+            for(int y = 0; y < mazeHeight; y++)
             {
-                while (field.hasEast())
+                for(int x = 0; x < mazeWidth; x++)
                 {
-                    Console.Write(field.getCharValue());
-                    field = field._east;
+                    try
+                    {
+                        Console.Write(field.getCharValue());
+                        field = field._east;
+                    }
+                    catch
+                    {
+                        Console.Write(' ');
+                        break;
+                    }       
+                    
                 }
                 Console.WriteLine();
                 origin = origin._south;
                 field = origin;
-            }            
+            }
+           
         }
 
     }

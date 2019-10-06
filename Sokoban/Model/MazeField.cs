@@ -15,26 +15,11 @@ namespace Sokoban
         public MazeField _west { get; set; }
 
 
-        public bool hasSouth()
-        {
-            if(_south != null)
-            {               
-                return true;
-            }
-            return false;
-        }
+
 
         public abstract char getCharValue();
-        public bool hasEast()
-        {
-            if (_east != null)
-            {
-                
-                return true;
-            }
-            return false;
-        }
-
+        
+       
         public Item content { get; set; }
 
         public Char symbol

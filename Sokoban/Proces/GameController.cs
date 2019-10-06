@@ -70,8 +70,10 @@ namespace Sokoban
         public void showMaze(Maze level)
         {
             MazeField origin = level.getMazeFields()[0];
+            int mazeHeight = level.getHeigth();
+            int mazeWidth = level.getWidth();
             Console.Clear();
-            _gv.drawMaze(origin);           
+            _gv.drawMaze(origin, mazeHeight, mazeWidth);           
         }
 
         public void runGame()
