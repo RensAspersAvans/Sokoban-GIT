@@ -7,7 +7,7 @@ namespace Sokoban.Model.MazeTypes
 {
     public class Field_Target : MazeField
     {
-        public Field_Targer()
+        public Field_Target()
         {
             this.symbol = 'x';
         }
