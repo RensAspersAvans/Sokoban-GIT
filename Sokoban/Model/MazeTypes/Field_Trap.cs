@@ -12,7 +12,7 @@ namespace Sokoban.Model.MazeTypes
 
         public Field_Trap()
         {
-            this.symbol = '~';
+            symbol = '~';
         }
 
         public override char getCharValue()

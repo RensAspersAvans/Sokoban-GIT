@@ -9,7 +9,7 @@ namespace Sokoban.Model.MazeTypes
     {
         public Field_Target()
         {
-            this.symbol = 'x';
+            symbol = 'x';
         }
         public override char getCharValue()
         {

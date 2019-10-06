@@ -32,6 +32,8 @@ namespace Sokoban.Model.GameItems
             }
         }
 
+        
+
         public override char symbol {
             get
             {

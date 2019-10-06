@@ -10,7 +10,7 @@ namespace Sokoban.Model.MazeTypes
     {
         public Field_Empty()
         {
-            this.symbol = ' ';
+            symbol = ' ';
         }
         
 
