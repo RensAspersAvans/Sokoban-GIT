@@ -73,7 +73,7 @@ namespace Sokoban
 
         public void showMaze(Maze level)
         {
-            MazeField origin = level.getMazeFields()[0];
+            MazeField origin = level._origin._south._south;
             int mazeHeight = level.getHeigth();
             int mazeWidth = level.getWidth();
             Console.Clear();

@@ -31,6 +31,7 @@ namespace Sokoban.Presentation
                 
                 origin = origin._south;
                 field = origin;
+
             }
            
         }

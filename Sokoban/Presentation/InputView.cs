@@ -11,7 +11,7 @@ namespace Sokoban.Presentation
 
         public int MenuChoice()
         {
-            Console.Write("> Kies een doolhof (1 - 6), s = stop");
+            Console.Write("> Kies een doolhof (1 - 6), s = stop ");
             int choice = -1;
 
             ConsoleKeyInfo input = Console.ReadKey();
