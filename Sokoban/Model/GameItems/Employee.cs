@@ -53,9 +53,10 @@ namespace Sokoban.Model.GameItems
 
         public void update()
         {
+            Random rnd = new Random();
             if (awake)
             {
-                Random rnd = new Random();
+                
                 int i = rnd.Next(1, 4);
 
                 switch (i)
@@ -84,10 +85,18 @@ namespace Sokoban.Model.GameItems
                     default:
                         break;
                 }
+                if (rnd.Next(1, 4) == 4)
+                {
+                    this.awake = false;
+                }
+
             }
             else
             {
-
+                if (rnd.Next(1, 10) == 5)
+                {
+                    this.awake = true;
+                }
             }
         }
     }
