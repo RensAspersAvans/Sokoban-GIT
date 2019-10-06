@@ -40,9 +40,10 @@ namespace Sokoban
             {
                 mazeLineTop = createLine(mazeFile[index]);
                 mazeLineBottom = createLine(mazeFile[index + 1]);
-                linkVertical();                
+                linkVertical(mazeLineTop, mazeLineBottom);                
                 level.addLine(mazeLineTop);                
             }
+            level.addLine(mazeLineBottom);
                   
                        
             return level;            
@@ -50,22 +51,22 @@ namespace Sokoban
 
         
 
-        private void linkVertical()
+        private void linkVertical(List<MazeField> listTop, List<MazeField> listBottom)
         {
             int largestIndex; //voor asymetrische doolhoven
-            if(mazeLineBottom.Count > mazeLineTop.Count)
+            if(listBottom.Count > listTop.Count)
             {
-                largestIndex = mazeLineBottom.Count;
+                largestIndex = listBottom.Count;
             }
             else
             {
-                largestIndex = mazeLineTop.Count;
+                largestIndex = listTop.Count;
             }
 
             for(int index = 0; index < largestIndex; index++)
             {
-                mazeLineBottom[index]._north = mazeLineTop[index];
-                mazeLineTop[index]._south = mazeLineBottom[index];
+                listBottom[index]._north = listTop[index];
+                listTop[index]._south = listBottom[index];
             }   
             
         }
