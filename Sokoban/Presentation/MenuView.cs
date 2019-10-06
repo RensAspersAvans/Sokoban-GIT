@@ -36,10 +36,15 @@ namespace Sokoban.Presentation
             Console.Write("|      ");
             Console.WriteLine("$ : collega            |                      |");
             Console.WriteLine("|----------------------------------------------------|");
-            Console.WriteLine();
-            
-             
-            
+            Console.WriteLine();           
+        }
+
+        public void showEndMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("Gefeliciteerd je hebt het level gehaald!");
+            Console.Write("Druk op een knop om af te sluiten ");
+            Console.ReadKey();
         }
     }
 }
