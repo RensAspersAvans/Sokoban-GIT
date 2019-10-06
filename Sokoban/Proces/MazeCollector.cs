@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Sokoban.Model.GameItems;
-using Sokoban.Model.MazeTypes;
 using System.Threading;
 
 namespace Sokoban

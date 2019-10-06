@@ -131,9 +131,15 @@ namespace Sokoban
                         emp.update();
                     }
                     showMaze(level); 
+                    if(level.checkFinished())
+                    {
+                        this.running = false;
+                    }
                 }
                 
             }
+            _mv.showEndMenu();
+            
         }
 
         private void reloadMaze()
