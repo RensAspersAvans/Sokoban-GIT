@@ -45,6 +45,8 @@ namespace Sokoban
                     linkVertical();
                     level.addLine(mazeLineTop);
                     level.addLine(mazeLineBottom);
+                    mazeLineBottom.Clear();
+                    mazeLineTop.Clear();
                 }
                 height++;
             }
@@ -67,17 +69,17 @@ namespace Sokoban
 
         private void linkVertical()
         {
-            int smallestIndex; //voor asymetrische doolhoven
-            if(mazeLineBottom.Count < mazeLineTop.Count)
+            int largestIndex; //voor asymetrische doolhoven
+            if(mazeLineBottom.Count > mazeLineTop.Count)
             {
-                smallestIndex = mazeLineBottom.Count;
+                largestIndex = mazeLineBottom.Count;
             }
             else
             {
-                smallestIndex = mazeLineTop.Count;
+                largestIndex = mazeLineTop.Count;
             }
 
-            for(int index = 0; index < smallestIndex; index++)
+            for(int index = 0; index < largestIndex; index++)
             {
                 mazeLineBottom[index]._north = mazeLineTop[index];
                 mazeLineTop[index]._south = mazeLineBottom[index];

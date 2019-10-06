@@ -31,9 +31,9 @@ namespace Sokoban
         }
 
         private int _number { get; set; }
-        private MazeField _origin { get; set; } 
+        public MazeField _origin { get; set; }
 
-       
+
 
         public void addLine(List<MazeField> mazeFieldLine)
         {
