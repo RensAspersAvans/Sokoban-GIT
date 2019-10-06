@@ -16,6 +16,27 @@ namespace Sokoban
 
         public Item content { get; set; }
 
+        public Char symbol
+        {
+            get {
+                if (content == null)
+                {
+                    return symbol;
+                }
+                else
+                {
+                    return content.symbol;
+                }
+
+            }
+
+            set
+            {
+                symbol = value;
+            }
+
+        }
+
         public MazeField findNextField(Directions d)
         {
             if (d == Directions.North)
