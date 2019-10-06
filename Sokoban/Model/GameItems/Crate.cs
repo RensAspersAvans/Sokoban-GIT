@@ -29,6 +29,10 @@ namespace Sokoban.Model.GameItems
                     this.cur_spot.content = null;
                     this.cur_spot = null;
                 }
+                else
+                {
+                    base.cur_spot = value;
+                }
             }
         }
 

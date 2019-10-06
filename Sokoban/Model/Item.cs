@@ -33,7 +33,7 @@ namespace Sokoban.Model
 
         public bool checkMove(Directions d)
         {
-            if (cur_spot.findNextField(d) is Field_Floor || cur_spot.findNextField(d) is Field_Trap || cur_spot.findNextField(d) is Field_Empty)
+            if (cur_spot.findNextField(d) is Field_Floor || cur_spot.findNextField(d) is Field_Trap || cur_spot.findNextField(d) is Field_Empty || cur_spot.findNextField(d) is Field_Target)
             {
                 return true;
             }
