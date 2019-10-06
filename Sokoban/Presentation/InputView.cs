@@ -17,7 +17,7 @@ namespace Sokoban.Presentation
             ConsoleKeyInfo input = Console.ReadKey();
             while(true)
             {
-                if(input.KeyChar >= '1' && input.KeyChar <= '4')
+                if(input.KeyChar >= '1' && input.KeyChar <= '6')
                 {
                     choice = (int)char.GetNumericValue(input.KeyChar);
                     return choice;
