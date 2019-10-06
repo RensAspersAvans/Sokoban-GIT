@@ -19,6 +19,7 @@ namespace Sokoban.Presentation
                     field = field._east;
                 }
                 Console.WriteLine();
+                
                 origin = origin._south;
                 field = origin;
             }            

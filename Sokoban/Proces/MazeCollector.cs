@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Sokoban.Model.GameItems;
 using Sokoban.Model.MazeTypes;
 
 namespace Sokoban
@@ -12,6 +13,7 @@ namespace Sokoban
        private List<MazeField> mazeLineTop = new List<MazeField>();
        private List<MazeField> mazeLineBottom = new List<MazeField>();
        private Maze level;
+       public GameController gc { get; set; }
        public bool loadFile(int choice) //laad de file en returnt true als het succesvol is, anders false
        {
             try
@@ -24,6 +26,7 @@ namespace Sokoban
             }
             return true;
        }
+
 
 
         public Maze createMaze()
@@ -100,12 +103,14 @@ namespace Sokoban
                         break;
                     case 'o':
                         tempField = new Field_Floor();
+                        tempField.content = new Crate(tempField);
                         break;
                     case '.':
                         tempField = new Field_Floor();
                         break;
                     case '@':
                         tempField = new Field_Floor();
+                        tempField.content = new Player(tempField);
                         break;
                     case 'x':
                         tempField = new Field_Target();

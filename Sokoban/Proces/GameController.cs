@@ -1,4 +1,5 @@
-﻿using Sokoban.Presentation;
+﻿using Sokoban.Model.GameItems;
+using Sokoban.Presentation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,8 @@ namespace Sokoban
         private MenuView _mv;
         private GameView _gv;
         private InputView _iv;
+        private Player player;
+        private Employee emp;
         public bool running { get; set; }
 
         public GameController()
@@ -53,6 +56,7 @@ namespace Sokoban
         {
             Maze level;
             MazeCollector parser = new MazeCollector();
+            parser.gc = this;
             if(parser.loadFile(choice)) //als de file geladen kan worden
             {
                 level = parser.createMaze();
@@ -88,8 +92,30 @@ namespace Sokoban
                 }
                 else
                 {
-                    //playerobject.move(c)
-                    //if er een medewerker is, update die
+                    switch (c)
+                    {
+                        
+                        case Command.go_north:
+                            player.move(Directions.North);
+                            break;
+                        case Command.go_west:
+                            player.move(Directions.West);
+                            break;
+                        case Command.go_south:
+                            player.move(Directions.South);
+                            break;
+                        case Command.go_east:
+                            player.move(Directions.East);
+                            break;
+                        default:
+                            break;
+                    }
+
+                    if (emp != null)
+                    {
+                        emp.update();
+                    }
+                    
                 }
                 
             }

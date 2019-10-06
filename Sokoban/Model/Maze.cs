@@ -14,11 +14,8 @@ namespace Sokoban
         {
             _fullMaze = new List<MazeField>();
             _size = 0;
-            _number = 99;
-            if (_number == 99)
-            {
-                testMaze();
-            }
+            
+            
 
 
 
