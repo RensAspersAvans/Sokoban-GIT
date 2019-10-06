@@ -28,8 +28,10 @@ namespace Sokoban.Presentation
                     
                 }
                 Console.WriteLine();
-                //field = origin._south;
-                //origin = origin._south;
+                
+                origin = origin._south;
+                field = origin;
+
             }
            
         }

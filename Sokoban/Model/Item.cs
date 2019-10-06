@@ -10,7 +10,7 @@ namespace Sokoban.Model
     public class Item //Zelfde idee als MazeField
     {
         public virtual Char symbol { get; set; }
-        public MazeField cur_spot { get; set; }
+        public virtual MazeField cur_spot { get; set; }
 
 
         public virtual bool move(Directions d)

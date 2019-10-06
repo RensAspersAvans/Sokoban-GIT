@@ -15,12 +15,29 @@ namespace Sokoban.Model.GameItems
             this.symbol = '#';
         }
 
+        public override MazeField cur_spot
+        {
+            get
+            {
+                return base.cur_spot;
+
+            }
+            set
+            {
+                if (value is Field_Empty)
+                {
+                    this.cur_spot.content = null;
+                    this.cur_spot = null;
+                }
+            }
+        }
+
         public override char symbol {
             get
             {
                 if (this.cur_spot is Field_Target)
                 {
-                    return 'X';
+                    return '0';
                 }
                 else
                 {
