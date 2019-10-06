@@ -65,8 +65,11 @@ namespace Sokoban
 
             for(int index = 0; index < largestIndex; index++)
             {
-                listBottom[index]._north = listTop[index];
-                listTop[index]._south = listBottom[index];
+                if(listBottom[index] != null && listTop[index] != null)
+                {
+                    listBottom[index]._north = listTop[index];
+                    listTop[index]._south = listBottom[index];
+                }                
             }   
             
         }
