@@ -60,6 +60,18 @@ namespace Sokoban
 
         }
 
+        public bool emptyLevel()
+        {
+            if (_fullMaze.Count == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public void testMaze()
         {
             //buildEmptyMaze(6, 8);

@@ -38,12 +38,23 @@ namespace Sokoban
             
             for(int index = 0; index < mazeFile.Length - 1; index++)
             {
-                mazeLineTop = createLine(mazeFile[index]);
-                mazeLineBottom = createLine(mazeFile[index + 1]);
-                linkVertical(mazeLineTop, mazeLineBottom);                
-                level.addLine(mazeLineTop);                
+                if (level.emptyLevel())
+                {
+                    mazeLineTop = createLine(mazeFile[index]);
+                    level.addLine(mazeLineTop);  
+                }
+                else
+                {
+                    mazeLineBottom = createLine(mazeFile[index]);
+                    linkVertical(mazeLineTop, mazeLineBottom);
+                    level.addLine(mazeLineBottom);
+                    mazeLineTop = mazeLineBottom;
+                }
+                               
+                              
             }
-            level.addLine(mazeLineBottom);
+            
+            
                   
                        
             return level;            
