@@ -37,7 +37,7 @@ namespace Sokoban
             else
             {
                 createMaze(levelNumber);
-                Thread.Sleep(2000);
+                Thread.Sleep(20000);
             }
         }
 
@@ -74,7 +74,10 @@ namespace Sokoban
         public void showMaze(Maze level)
         {
             MazeField origin = level.getMazeFields()[0];
-            _gv.drawMaze(origin);           
+            int mazeHeight = level.getHeigth();
+            int mazeWidth = level.getWidth();
+            Console.Clear();
+            _gv.drawMaze(origin, mazeHeight, mazeWidth);           
         }
 
         public void runGame()
