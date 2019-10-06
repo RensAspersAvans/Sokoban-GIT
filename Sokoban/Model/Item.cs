@@ -11,16 +11,22 @@ namespace Sokoban.Model
     {
         public virtual Char symbol { get; set; }
         public virtual MazeField cur_spot { get; set; }
+        public bool check = true;
 
 
         public virtual bool move(Directions d)
         {
             if (checkMove(d))
             {
+                
                 this.cur_spot.content = null;
-                this.cur_spot = cur_spot.findNextField(d);
-                this.cur_spot.content = this;
-                return true;
+                                this.cur_spot = cur_spot.findNextField(d);
+                if (check)
+                {
+                    this.cur_spot.content = this;
+                    return true;
+                }
+                
             }
 
             return false;

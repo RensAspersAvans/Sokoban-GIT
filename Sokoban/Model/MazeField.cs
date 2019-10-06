@@ -20,7 +20,7 @@ namespace Sokoban
         public abstract char getCharValue();
        
 
-        public Item content { get; set; }
+        public virtual Item content { get; set; }
 
         private Char _Symbol;
 

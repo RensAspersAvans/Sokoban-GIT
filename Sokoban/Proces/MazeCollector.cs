@@ -112,6 +112,9 @@ namespace Sokoban
                     case 'x':                        
                         tempField = new Field_Target();
                         break;
+                    case '~':
+                        tempField = new Field_Trap();
+                        break;
                     default:
                         tempField = new Field_Empty();
                         break;
